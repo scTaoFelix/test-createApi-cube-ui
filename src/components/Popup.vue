@@ -41,8 +41,8 @@ const useDialog = (root: ComponentInstance) => {
       content: '我是正文',
       type: 'prompt',
       maskClosable: true,
-      onMaskClick: () => {
-        console.log('点击了背景')
+      onMaskClick: (e: MouseEvent) => {
+        console.log('点击了背景', e)
       }
     }).show()
   }

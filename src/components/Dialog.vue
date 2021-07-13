@@ -10,7 +10,7 @@ import { Dialog } from 'cube-ui'
 
 const useDialog = (root: ComponentInstance) => {
   const dialog = ref<Dialog>()
-  const closeHandler = (e: object) => {
+  const closeHandler = (e: MouseEvent) => {
     console.log(e)
     root.$createToast({
       type: 'warn',
@@ -18,7 +18,7 @@ const useDialog = (root: ComponentInstance) => {
       txt: '点击关闭按钮'
     }).show()
   }
-  const cancleHandler = (e: object) => {
+  const cancleHandler = (e: MouseEvent) => {
     console.log(e)
     root.$createToast({
       type: 'warn',
@@ -26,7 +26,7 @@ const useDialog = (root: ComponentInstance) => {
       txt: '点击取消按钮'
     }).show()
   }
-  const confirmHandler = (e: object, val?: string|number) => {
+  const confirmHandler = (e: MouseEvent, val: string|number) => {
     console.log(e)
     root.$createToast({
       type: 'correct',

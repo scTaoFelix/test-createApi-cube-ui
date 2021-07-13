@@ -20,7 +20,7 @@ const useDialog = (root: ComponentInstance) => {
       maskClosable: true,
       zIndex: 2,
       onTimeout: () => {
-        console.log('Timeout')
+        console.log('onTimeout')
       }
     }).show()
     setTimeout(() => {

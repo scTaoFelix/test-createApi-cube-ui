@@ -31,9 +31,9 @@ const data = [
 ]
 const useActionSheet = (root: ComponentInstance) => {
   const actionSheet = ref<ActionSheet>()
-  const selectHandler = (item: SelectActionSheetItem, index: number) => {
+  const selectHandler = (item: SelectActionSheetItem) => {
     root.$createToast({
-      txt: `Clicked ${item.content}, ${index}`,
+      txt: `Clicked ${item.content}`,
       type: 'correct',
       time: 1000
     }).show()
